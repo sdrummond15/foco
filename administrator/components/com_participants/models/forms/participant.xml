@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="details"
+              addfieldpath="/administrator/components/com_participants/models/fields">
+
+        <field name="id"
+               type="text"
+               default="0"
+               readonly="true"
+               class="readonly"
+               label="JGLOBAL_FIELD_ID_LABEL"
+               description="JGLOBAL_FIELD_ID_DESC"
+        />
+
+        <field name="name"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JGLOBAL_NAME"
+               description="JFIELD_NAME_DESC"
+               required="true"
+        />
+
+        <field name="alias"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_ALIAS_LABEL"
+               description="JFIELD_ALIAS_DESC"
+               readonly="true"
+        />
+
+        <field
+                name="id_doing"
+                type="sql"
+                label="JFIELD_DOING_LABEL"
+                query="SELECT id, name FROM #__doings ORDER BY name"
+                key_field="id"
+                value_field="name"
+                required="true"
+        >
+        </field>
+
+        <field name="cpf"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_CPF_LABEL"
+               required="true"
+        />
+
+        <field name="email"
+               type="email"
+               class="inputbox"
+               size="40"
+               label="JFIELD_EMAIL_LABEL"
+               required="true"
+        />
+
+        <field name="rg"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_RG_LABEL"
+               required="true"
+        />
+
+        <field name="date_birth"
+               type="text"
+               size="20"
+               label="JFIELD_DATE_BIRTH_LABEL"
+               maxlength="10"
+               required="true"
+        />
+
+        <field name="gender"
+               type="radio"
+               label="JFIELD_GENDER_LABEL"
+               size="1"
+               class="btn-group"
+               default="Masculino"
+               required="true"
+        >
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+        </field>
+
+        <field name="address"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_ADDRESS_LABEL"
+               required="true"
+        />
+
+        <field name="number"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_NUMBER_LABEL"
+               required="true"
+        />
+
+        <field name="complement"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_COMPLEMENT_LABEL"
+        />
+
+        <field name="city"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_CITY_LABEL"
+               required="true"
+        />
+
+        <field name="state"
+               type="list"
+               label="JFIELD_STATE_LABEL"
+               class="inputbox"
+               size="1"
+               default="1"
+               required="true"
+        >
+            <option value="AC">AC</option>
+            <option value="AL">AL</option>
+            <option value="AP">AP</option>
+            <option value="AM">AM</option>
+            <option value="BA">BA</option>
+            <option value="CE">CE</option>
+            <option value="DF">DF</option>
+            <option value="ES">ES</option>
+            <option value="GO">GO</option>
+            <option value="MA">MA</option>
+            <option value="MT">MT</option>
+            <option value="MS">MS</option>
+            <option value="MG">MG</option>
+            <option value="PA">PA</option>
+            <option value="PB">PB</option>
+            <option value="PR">PR</option>
+            <option value="PE">PE</option>
+            <option value="PI">PI</option>
+            <option value="RJ">RJ</option>
+            <option value="RN">RN</option>
+            <option value="RS">RS</option>
+            <option value="RO">RO</option>
+            <option value="RR">RR</option>
+            <option value="SC">SC</option>
+            <option value="SP">SP</option>
+            <option value="SE">SE</option>
+            <option value="TO">TO</option>
+        </field>
+
+        <field name="postal_code"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_POSTAL_CODE_LABEL"
+               required="true"
+        />
+
+        <field name="phone"
+               type="text"
+               class="inputbox"
+               size="40"
+               label="JFIELD_PHONE_LABEL"
+               required="true"
+        />
+
+    </fieldset>
+
+    <fieldset name="publish">
+
+        <field name="published"
+               type="list"
+               label="JSTATUS"
+               class="inputbox"
+               size="1"
+               default="1"
+        >
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+
+        <field name="created"
+               type="calendar"
+               label="JGLOBAL_FIELD_CREATED_LABEL"
+               description="JGLOBAL_FIELD_CREATED_DESC"
+               class="inputbox"
+               size="22"
+               format="%Y-%m-%d %H:%M:%S"
+               filter="user_utc"
+        />
+
+        <field name="created_by"
+               type="user"
+               label="JGLOBAL_FIELD_CREATED_BY_LABEL"
+               description="JGLOBAL_FIELD_CREATED_BY_Desc"
+        />
+
+        <field name="modified"
+               type="calendar"
+               class="readonly"
+               label="JGLOBAL_FIELD_MODIFIED_LABEL"
+               description="COM_WEBLINKS_FIELD_MODIFIED_DESC"
+               size="22"
+               readonly="true"
+               format="%Y-%m-%d %H:%M:%S"
+               filter="user_utc"
+        />
+
+        <field name="modified_by"
+               type="user"
+               label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"
+               class="readonly"
+               readonly="true"
+               filter="unset"
+        />
+
+        <field name="checked_out"
+               type="hidden"
+               filter="unset"
+        />
+
+        <field name="checked_out_time"
+               type="hidden"
+               filter="unset"
+        />
+
+        <field name="publish_up"
+               type="calendar"
+               label="JGLOBAL_FIELD_PUBLISH_UP_LABEL"
+               description="JGLOBAL_FIELD_PUBLISH_UP_DESC"
+               class="inputbox"
+               format="%Y-%m-%d %H:%M:%S"
+               size="22"
+               filter="user_utc"
+        />
+
+        <field name="publish_down"
+               type="calendar"
+               label="JGLOBAL_FIELD_PUBLISH_DOWN_LABEL"
+               description="JGLOBAL_FIELD_PUBLISH_DOWN_DESC"
+               class="inputbox"
+               format="%Y-%m-%d %H:%M:%S"
+               size="22"
+               filter="user_utc"
+        />
+
+    </fieldset>
+</form>
