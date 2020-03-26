@@ -1,0 +1,43 @@
+#article-home {
+    width: 100%;
+    display: table;
+    background-color: #00493b;
+}
+
+.article-home{
+    width: 1170px;
+    display: table;
+    margin: auto;
+}
+
+.description {
+    width: calc(50% - 154px);
+    display: inline-table;
+    margin: 40px 60px;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    padding: 15px;
+}
+.description img{
+    float: left;
+    margin-right: 20px;
+}
+
+.description h1{
+    margin-bottom: 8px;
+}
+
+.description h1 a {
+    color: #b9ce34;
+    text-align: center;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.text-description a,
+.text-description a p {
+    color: #FFF;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 300;
+}

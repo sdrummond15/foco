@@ -1,0 +1,115 @@
+.moduletable-contato h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #eac100;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+
+#contact-social-footer {
+    display: table;
+    margin: auto;
+}
+
+#contact-social-footer p {
+    text-align: center;
+}
+
+#contact-social-footer p a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#contact-social-footer p a:hover {
+    color: #d8d9dd;
+    text-decoration: none;
+}
+
+ul.contact-social-footer {
+    list-style: none;
+    display: table;
+    margin: 15px auto 0 auto;
+    padding: 0;
+}
+
+ul.contact-social-footer li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+ul.contact-social-footer li:last-child {
+    border: 0;
+}
+
+ul.contact-social-footer li a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+ul.contact-social-footer li a:hover {
+    color: #edeef0;
+}
+
+ul.contact-social-footer li a b {
+    font-weight: normal;
+}
+
+ul.contact-social-footer li a i {
+    font-size: 36px;
+}
+
+ul.contact-social-footer li a span {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.moduletable-sociais #contact-social-footer {
+    float: none;
+}
+
+.moduletable-sociais ul.contact-social-footer {
+    margin: auto;
+}
+
+.moduletable-sociais ul.contact-social-footer li a {
+    color: #dfdfdf;
+}
+
+.moduletable-sociais ul.contact-social-footer li a:hover {
+    color: #FFF;
+}
+
+#contact-social-footer .certificado {
+    float: left;
+    margin-right: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    ul.contact-social-footer li a i {
+        font-size: 30px;
+        padding: 4px 0;
+        vertical-align: middle;
+    }
+
+    ul.contact-social-footer li a b {
+        display: none;
+    }
+
+    ul.contact-social-footer {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    ul.contact-social-footer li a span {
+        margin: 0;
+    }
+
+    ul.contact-social-footer li {
+        padding: 3px 5px;
+        border: 0;
+    }
+
+}

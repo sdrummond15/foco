@@ -13,9 +13,9 @@ class JConfig {
 	public $debug_lang = '0';
 	public $debug_lang_const = '1';
 	public $dbtype = 'mysqli';
-	public $host = '192.168.25.8';
+	public $host = 'localhost';
 	public $user = 'root';
-	public $password = '';
+	public $password = 'admin';
 	public $db = 'db_foco';
 	public $dbprefix = 'q74gf_';
 	public $live_site = '';
