@@ -154,7 +154,7 @@ strong, b {
 
 p {
     line-height: 1.6em;
-    margin: 8px 10px;
+    margin: 8px 0;
 }
 
 h1 {
@@ -262,15 +262,41 @@ ul, ol {
     width: calc(25% - 20px);
     background-color: #00a19a;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 15px;
     text-align: center;
     margin: 10px;
     padding: 20px;
-    text-transform: uppercase;
 }
 
 .newsflash-title {
     color: #fff !important;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.newsflash-title a {
+    color: #fff !important;
+}
+
+.newsflash-horiz p {
+    font-size: 18px;
+    margin: 10px;
+}
+
+figure.newsflash-image {
+    width: 100%;
+    height: 140px;
+    display: table;
+}
+
+figure.newsflash-image span {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
 }
 
 hr {
@@ -305,11 +331,6 @@ hr {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -4.6em;
-}
-
-#push {
-    height: 4.6em;
 }
 
 /** Buttoms **/
@@ -672,7 +693,6 @@ hr {
 #content-menu_wrap_bg {
     width: 100%;
     display: table;
-    margin-top: 40px;
 }
 
 #content-menu_wrap {
@@ -1596,97 +1616,75 @@ a.feed-link {
 /** Footer **/
 
 #footer_wrap {
-    display: table;
     width: 100%;
-    background-color: #00493b;
+    display: table;
 }
 
 #footer {
     width: 1170px;
-    margin: auto;
-}
-
-#footer div.custom hr {
-    border: 0;
-    color: rgb(226, 226, 226);
-    background-color: rgb(226, 226, 226);
-    height: 1px
+    margin: -110px auto 60px auto;
+    display: table;
 }
 
 #copyright {
-    width: 100%;
     clear: both;
+    width: 100%;
+    display: table;
+}
+
+.copyrightint {
+    width: 1170px;
     margin: auto;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 0.86em;
+    padding: 10px 0;
+    position: relative;
+}
+
+.copyrightint p {
     text-align: center;
-    color: #fff;
-    background-image: url("../images/curva_rodape.png");
+    font-size: 14px;
+    color: #FFF;
+    margin: 0;
+}
+
+.copyrightint a {
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    right: 0;
+}
+
+#bottom_wrap {
+    width: 100%;
+    display: table;
+    background-color: #00493b;
+    background-image: url('../../../images/back_bottom.png');
+    background-size: contain;
+    background-position: center bottom;
     background-repeat: no-repeat;
-    margin-bottom: -1px;
-    /* iPhone/iPad fix */
-    min-width: 960px;
-}
-
-#copyright a {
-    color: #515151;
-    text-decoration: none;
-}
-
-#copyright a:hover {
-    color: #515151;
-    text-decoration: none;
-}
-
-#copyright img {
-    border-style: none;
-}
-
-#copyright div.cp2 {
-    text-align: left;
 }
 
 /** Box/Banner/Links **/
 
 #box_wrap {
-    overflow: auto;
-    min-width: 960px;
+    width: 100%;
+    display: table;
 }
 
 #box_placeholder {
-    margin: auto;
-    padding-top: 20px;
-    width: 900px;
+    width: 1170px;
+    display: table;
+    margin: 60px auto 0 auto;
 }
 
-#box_placeholder a:hover {
-    color: #fff;
-}
-
-#box_placeholder h1, #box_placeholder h2, #box_placeholder h3 {
-    color: #969696;
-}
-
-#box1 {
-    width: 300px;
-    margin: 0;
-    padding: 0;
+#box1, #box2, #box3 {
+    width: calc(33.33% - 20px);
+    display: table;
     float: left;
-}
-
-#box2 {
-    width: 300px;
-    margin: 0;
-    padding: 0;
-    float: left;
+    margin-right: 30px;
 }
 
 #box3 {
-    width: 300px;
-    margin: 0;
-    padding: 0;
-    float: left;
+    margin-right: 0;
 }
 
 /** Editor **/
@@ -2068,6 +2066,7 @@ body.contentpane a:hover {
 
 .item-page-home {
     margin: 0 60px 100px 60px;
+    display: table;
 }
 
 .item-page-home h2 {

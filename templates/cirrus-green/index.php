@@ -1,11 +1,12 @@
 <?php
+
 /**
  * @subpackage	Cirrus Green v1.6 HM02J
  * @copyright	Copyright (C) 2010-2013 Hurricane Media - All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined( '_JEXEC' ) or die( 'Restricted access' );
+defined('_JEXEC') or die('Restricted access');
 $LeftMenuOn = ($this->countModules('position-4') or $this->countModules('position-5') or $this->countModules('position-7'));
 $RightMenuOn = ($this->countModules('position-6') or $this->countModules('position-8'));
 $TopNavOn = ($this->countModules('position-13'));
@@ -19,6 +20,7 @@ $sitedescription = $this->params->get('sitedescription');
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+
 <head>
 	<jdoc:include type="head" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
@@ -28,6 +30,7 @@ $sitedescription = $this->params->get('sitedescription');
 	<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/sfhover.js"></script>
 	<script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/script.js"></script>
 </head>
+
 <body>
 
 	<div id="wrapper">
@@ -36,10 +39,10 @@ $sitedescription = $this->params->get('sitedescription');
 			<div id="header">
 
 				<!-- Search -->
-				<?php if ($this->countModules('position-0')): ?>
+				<?php if ($this->countModules('position-0')) : ?>
 					<div id="search_wrap">
 						<div id="search">
-							<jdoc:include type="modules" name="position-0"/>
+							<jdoc:include type="modules" name="position-0" />
 						</div>
 					</div>
 				<?php endif; ?>
@@ -47,16 +50,16 @@ $sitedescription = $this->params->get('sitedescription');
 				<!-- Logo -->
 				<div id="logo">
 
-					<?php if ($logo && $logoimage == 1): ?>
-						<a href="<?php echo $this->baseurl ?>"><img src="<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo $sitename; ?>" /></a>
+					<?php if ($logo && $logoimage == 1) : ?>
+						<a href="<?php echo $this->baseurl ?>"><img src="<?php echo htmlspecialchars($logo); ?>" alt="<?php echo $sitename; ?>" /></a>
 					<?php endif; ?>
-					<?php if (!$logo || $logoimage == 0): ?>
+					<?php if (!$logo || $logoimage == 0) : ?>
 
-						<?php if ($sitetitle): ?>
-							<a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitetitle); ?></a><br/>
+						<?php if ($sitetitle) : ?>
+							<a href="<?php echo $this->baseurl ?>"><?php echo htmlspecialchars($sitetitle); ?></a><br />
 						<?php endif; ?>
 
-						<?php if ($sitedescription): ?>
+						<?php if ($sitedescription) : ?>
 							<div class="sitedescription"><?php echo htmlspecialchars($sitedescription); ?></div>
 						<?php endif; ?>
 
@@ -67,7 +70,7 @@ $sitedescription = $this->params->get('sitedescription');
 				<div class="menutop">
 					<div id="topmenu_wrap">
 						<div id="topmenu">
-							<jdoc:include type="modules" name="position-1"/>
+							<jdoc:include type="modules" name="position-1" />
 						</div>
 					</div>
 
@@ -77,7 +80,7 @@ $sitedescription = $this->params->get('sitedescription');
 						</div>
 					</div>
 					<div class="menuresp">
-						<jdoc:include type="modules" name="position-1"/>
+						<jdoc:include type="modules" name="position-1" />
 					</div>
 				</div>
 
@@ -85,17 +88,17 @@ $sitedescription = $this->params->get('sitedescription');
 		</div>
 
 		<!-- Breadcrumbs -->
-		<?php if ($this->countModules('position-2')): ?>
+		<?php if ($this->countModules('position-2')) : ?>
 			<div id="breadcrumbs">
 				<jdoc:include type="modules" name="position-2" />
 			</div>
 		<?php endif; ?>
 
 		<!-- TopNav -->
-		<?php if ($TopNavOn): ?>
+		<?php if ($TopNavOn) : ?>
 			<div id="topnav_wrap">
 				<div id="topnav">
-					<jdoc:include type="modules" name="position-13" style="xhtml"/>
+					<jdoc:include type="modules" name="position-13" style="xhtml" />
 				</div>
 			</div>
 		<?php endif; ?>
@@ -109,7 +112,7 @@ $sitedescription = $this->params->get('sitedescription');
 
 
 				<!-- Left Menu -->
-				<?php if($LeftMenuOn ): ?>
+				<?php if ($LeftMenuOn) : ?>
 					<div id="leftmenu">
 						<jdoc:include type="modules" name="position-7" style="xhtml" />
 						<jdoc:include type="modules" name="position-4" style="xhtml" />
@@ -119,78 +122,84 @@ $sitedescription = $this->params->get('sitedescription');
 
 
 				<!-- Contents -->
-				<?php if($LeftMenuOn AND $RightMenuOn): ?>
-					<div id="content-w1">
-					<?php elseif($LeftMenuOn OR $RightMenuOn): ?>
-						<div id="content-w2">
-						<?php else: ?>
-							<div id="content-w3">
-							<?php endif; ?>
+				<?php
+				if ($LeftMenuOn and $RightMenuOn) :
+					$w = 'w1';
+				elseif ($LeftMenuOn or $RightMenuOn) :
+					$w = 'w2';
+				else :
+					$w = 'w3';
+					?>
+					<div id="content-<?= $w ?>">
+					<?php endif; ?>
 
-							<?php if ($this->countModules('position-12')): ?>
-								<div id="content-top">
-									<jdoc:include type="modules" name="position-12" />
-								</div>
-							<?php endif; ?>
-
-							<jdoc:include type="message" />
-							<jdoc:include type="component" />
+					<?php if ($this->countModules('position-12')) : ?>
+						<div id="content-top">
+							<jdoc:include type="modules" name="position-12" />
 						</div>
+					<?php endif; ?>
 
-
-						<!-- Right Menu -->
-						<?php if($RightMenuOn ): ?>
-							<div id="rightmenu">
-								<jdoc:include type="modules" name="position-6" style="xhtml" />
-								<jdoc:include type="modules" name="position-8" style="xhtml" />
-								<jdoc:include type="modules" name="position-3" style="xhtml" />
-							</div>
-						<?php endif; ?>
-
-
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
 					</div>
+
+
+					<!-- Right Menu -->
+					<?php if ($RightMenuOn) : ?>
+						<div id="rightmenu">
+							<jdoc:include type="modules" name="position-6" style="xhtml" />
+							<jdoc:include type="modules" name="position-8" style="xhtml" />
+							<jdoc:include type="modules" name="position-3" style="xhtml" />
+						</div>
+					<?php endif; ?>
+
+
+			</div>
+		</div>
+
+		<div id="bottom_wrap">
+			<!-- Footer -->
+			<div id="footer_wrap">
+				<div id="footer">
+					<jdoc:include type="modules" name="position-14" />
 				</div>
-
-
-				<!-- Footer -->
-				<div id="footer_wrap">
-					<div id="footer">
-						<jdoc:include type="modules" name="position-14" />
-					</div>
-				</div>
-
-
-				<!-- Banner/Links -->
-				<div id="box_wrap">
-					<div id="box_placeholder">
-						<div id="box1"><jdoc:include type="modules" name="position-9" style="xhtml" /></div>
-						<div id="box2"><jdoc:include type="modules" name="position-10" style="xhtml" /></div>
-						<div id="box3"><jdoc:include type="modules" name="position-11" style="xhtml" /></div>
-					</div>
-				</div>
-
-
-				<div id="push"></div>
-
 			</div>
 
 
-
-
-
-			<!-- Page End -->
-
-
-
-
+			<!-- Banner/Links -->
+			<div id="box_wrap">
+				<div id="box_placeholder">
+					<div id="box1">
+						<jdoc:include type="modules" name="position-9" style="xhtml" />
+					</div>
+					<div id="box2">
+						<jdoc:include type="modules" name="position-10" style="xhtml" />
+					</div>
+					<div id="box3">
+						<jdoc:include type="modules" name="position-11" style="xhtml" />
+					</div>
+				</div>
+			</div>
 
 			<div id="copyright">
-				<br/>
-				<br/>
-				<p>&copy;<?php echo date('Y'); ?> <?php echo $sitename; ?> | Todos os direitos reservados</p>
+                <div class="copyrightint">
+                    <?php if ($this->countModules('position-15')) : ?>
+                        <jdoc:include type="modules" name="position-15" style="xhtml" />
+                    <?php else : ?>
+                        <p>
+                            Copyright &copy; <?php echo $sitetitle . ' - ' . $sitedescription . ' - ' . date('Y'); ?> | Todos os
+                            direitos reservados
+                        </p>
+                    <?php endif; ?>
+                    <a class="sd" href="http://www.sdrummond.com.br" title="Sdrummond Tecnologia" target="_blank">
+                        <img src="images/sd.png" alt="Sdrummond Tecnologia" title="Sdrummond Tecnologia">
+                    </a>
+                </div>
+            </div>
+		</div>
 
+	</div>
 
-			</div>
+</body>
 
-		</body>
-		</html>
+</html>
