@@ -2,9 +2,15 @@ jQuery(document).ready(function ($) {
 
     var nextDiv = $('#header_wrap').next();
 
-    $(window).on('resize', function () {
-        nextDiv.css('padding-top', $('#header_wrap').height() - 1);
-    }).trigger('resize');
+    $(this).on('scroll', function () {
+        var topo = $(this).scrollTop();
+        //Redimensionando a Logo
+        if (topo > 100) {
+            $('#logo a img').height(70);
+        } else {
+            $('#logo a img').height(100);
+        }
+    });
 
     /*MENU RESPONSIVO*/
 
