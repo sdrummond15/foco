@@ -35,7 +35,7 @@ ul.contact-social-footer {
 
 ul.contact-social-footer li {
     display: inline-block;
-    padding: 0 5px;
+    margin: 0 20px;
 }
 
 ul.contact-social-footer li:last-child {
@@ -45,24 +45,34 @@ ul.contact-social-footer li:last-child {
 ul.contact-social-footer li a {
     color: #FFF;
     text-decoration: none;
-    font-size: 20px;
 }
 
 ul.contact-social-footer li a:hover {
     color: #edeef0;
 }
 
-ul.contact-social-footer li a b {
-    font-weight: normal;
-}
-
-ul.contact-social-footer li a i {
-    font-size: 36px;
-}
-
 ul.contact-social-footer li a span {
-    margin-right: 10px;
-    font-size: 18px;
+    width: 60px;
+    height: 60px;
+    display: table;
+    background-size: cover;
+    background-position: center;
+}
+
+ul.contact-social-footer li a.facebook span {
+    background-image: url('../../../../images/facebook.png');
+}
+ul.contact-social-footer li a.instagram span {
+    background-image: url('../../../../images/instagram.png');
+}
+ul.contact-social-footer li a.whatsapp span {
+    background-image: url('../../../../images/whatsapp.png');
+}
+ul.contact-social-footer li a.phone span {
+    background-image: url('../../../../images/phone.png');
+}
+ul.contact-social-footer li a.maps span {
+    background-image: url('../../../../images/maps.png');
 }
 
 .moduletable-sociais #contact-social-footer {

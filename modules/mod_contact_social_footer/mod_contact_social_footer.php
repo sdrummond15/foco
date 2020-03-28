@@ -25,5 +25,6 @@ $twitter = $params->get('twitter');
 $whatsapp = $params->get('whatsapp');
 $whatsappNumber = modContact_Social_FooterHelper::removeCharacters($whatsapp);
 $whatsapp_msg = $params->get('whatsapp_msg');
+$maps = $params->get('maps');
 
 require JModuleHelper::getLayoutPath('mod_contact_social_footer', $params->get('layout', 'default'));

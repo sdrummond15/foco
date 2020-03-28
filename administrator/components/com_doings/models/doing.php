@@ -178,20 +178,28 @@ class DoingsModelDoing extends JModelAdmin
         {
             $data = $this->getItem();
 
-            if(!empty($data->get('date_start'))){
+            if(!empty($data->get('date_start')) && $data->get('date_start') != '0000-00-00'){
                 $data->set('date_start', $this->revertDate($data->get('date_start')));
+            }else{
+                $data->set('date_start','');
             }
 
-            if(!empty($data->get('hour_start'))){
+            if(!empty($data->get('hour_start')) && $data->get('hour_start') != '00:00:00'){
                 $data->set('hour_start', $this->removeHour($data->get('hour_start')));
+            }else{
+                $data->set('hour_start','');
             }
 
-            if(!empty($data->get('date_end'))){
+            if(!empty($data->get('date_end')) && $data->get('date_end') != '0000-00-00'){
                 $data->set('date_end', $this->revertDate($data->get('date_end')));
+            }else{
+                $data->set('date_end','');
             }
 
-            if(!empty($data->get('hour_end'))){
+            if(!empty($data->get('hour_end')) && $data->get('hour_end') != '00:00:00'){
                 $data->set('hour_end', $this->removeHour($data->get('hour_end')));
+            }else{
+                $data->set('hour_end','');
             }
         }
 

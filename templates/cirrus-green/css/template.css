@@ -1622,7 +1622,7 @@ a.feed-link {
 
 #footer {
     width: 1170px;
-    margin: -110px auto 60px auto;
+    margin: -110px auto 30px auto;
     display: table;
 }
 
@@ -1673,18 +1673,15 @@ a.feed-link {
 #box_placeholder {
     width: 1170px;
     display: table;
-    margin: 60px auto 0 auto;
+    margin: 0 auto;
 }
 
-#box1, #box2, #box3 {
-    width: calc(33.33% - 20px);
-    display: table;
-    float: left;
-    margin-right: 30px;
-}
-
+#box1, 
+#box2, 
 #box3 {
-    margin-right: 0;
+    width: 100%;
+    display: table;
+    margin-bottom: 30px;
 }
 
 /** Editor **/
@@ -2076,6 +2073,33 @@ body.contentpane a:hover {
 .item-page-home p {
     font-size: 20px;
     font-weight: 300;
+}
+
+.moduletable_menu_bottom ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: table;
+    margin: auto;
+}
+
+.moduletable_menu_bottom ul li {
+    display: inline-table;
+    border-right: 1px solid #b9ce34;
+}
+
+.moduletable_menu_bottom ul li:last-child {
+    border: 0;
+}
+
+.moduletable_menu_bottom ul li a {
+    padding: 5px 30px;
+    color: #b9ce34;
+    font-size: 24px;
+    font-weight: 300;
+}
+.moduletable_menu_bottom ul li a:hover {
+    color: #cae32e
 }
 
 @media screen and (max-width: 992px) {

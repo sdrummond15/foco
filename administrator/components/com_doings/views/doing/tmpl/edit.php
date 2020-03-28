@@ -51,11 +51,8 @@ $document->addScript('components/com_doings/assets/js/script.js');
                             <?php echo $this->form->renderField('hour_start'); ?>
                             <?php echo $this->form->renderField('date_end'); ?>
                             <?php echo $this->form->renderField('hour_end'); ?>
-                            <?php echo $this->form->renderField('local'); ?>
-                            <?php echo $this->form->renderField('address'); ?>
-                            <?php echo $this->form->renderField('id_city'); ?>
+			    <?php echo $this->form->renderField('local'); ?>
                             <?php echo $this->form->renderField('contact'); ?>
-                            <?php echo $this->form->renderField('subscription'); ?>
                             <?php echo $this->form->renderField('description'); ?>
                         </div>
                     </div>

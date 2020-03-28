@@ -1,0 +1,131 @@
+#latest-list {
+    width: calc(100% - 40px);
+    padding: 20px;
+    background-color: #669289;
+    border-radius: 20px;
+}
+
+#latest-list h1 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#latest-list h1 a {
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 24px;
+    color: #FFF;
+}
+
+#all-latest .latest {
+    display: inline-table;
+    width: calc(50% - 120px);
+    margin-right: 20px;
+    background-color: #FFF;
+    border-radius: 15px;
+}
+
+div#jemmoduleteaser .eventbox {
+    width: 100%;
+    display: table;
+    border-top: 1px solid #FFF;
+    padding: 10px 0;
+}
+
+#all-latest .latest .data {
+    background-color: #00a19a;
+    padding: 10px 15px;
+    text-align: center;
+    float: left;
+    margin-left: 20px;
+    vertical-align: top;
+    min-height: 100%;
+}
+
+#all-latest .latest a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#all-latest .latest .data a>span {
+    vertical-align: middle;
+}
+
+#all-latest .latest .data a>span>span:first-child {
+    font-size: 44px;
+}
+
+#all-latest .latest .data a>span>span {
+    font-size: 24px;
+    text-align: center;
+    display: table;
+    text-transform: uppercase;
+    margin: auto;
+    line-height: 1.1;
+    font-weight: 300;;
+}
+
+#all-latest .latest h2 {
+    padding: 10px 20px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#all-latest .latest h2 a {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    color: #4d4d4d;
+}
+
+#all-latest .latest p {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFF;
+}
+
+.all-events {
+    display: inline-table;
+    vertical-align: top;
+    width: 192px;
+    height: 94px;
+}
+
+.btn.btn-all-events {
+    background-color: #00493b;
+    font-size: 20px;
+    line-height: 1.4;
+    text-decoration: underline;
+    width: 100%;
+    border-radius: 15px;
+    text-align: center;
+    display: table;
+    height: 100%;
+    padding: 0;
+    font-weight: 300;
+    text-decoration: none !important;
+}
+
+.btn.btn-all-events:hover{
+    font-weight: normal;
+    color: #FFF;
+}
+
+.btn.btn-all-events span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+    #all-latest .latest .data {
+        width: 60px;
+    }
+    #all-latest .latest .data a span:first-child {
+        font-size: 14px;
+    }
+    #all-latest .latest .data a span {
+        font-size: 36px;
+        line-height: 48px;
+    }
+}

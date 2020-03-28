@@ -33,6 +33,7 @@
                type="media"
                directory="eventos"
                label="JFIELD_IMAGE_LABEL"
+               required="true"
         />
 
         <field name="date_start"
@@ -68,7 +69,7 @@
                description="JFIELD_HOUR_END_DESC"
         />
 
-        <field name="local"
+	<field name="local"
                type="text"
                class="inputbox"
                size="40"
@@ -76,36 +77,6 @@
                description="JFIELD_LOCAL_DESC"
         />
 
-        <field name="subscription"
-               type="radio"
-               default="0"
-               label="JFIELD_SUBSCRIPTION_LABEL"
-               description="JFIELD_SUBSCRIPTION_DESC"
-               class="btn-group btn-group-yesno"
-        >
-            <option value="1">JYES</option>
-            <option value="0">JNO</option>
-        </field>
-
-        <field name="address"
-               type="text"
-               class="inputbox"
-               size="40"
-               label="JFIELD_ADDRESS_LABEL"
-               description="JFIELD_ADDRESS_DESC"
-        />
-
-        <field
-                name="id_city"
-                type="sql"
-                default="1606"
-                label="JFIELD_CITY_LABEL"
-                query="SELECT id, concat(description,' - ',uf) AS city FROM #__cities ORDER BY description"
-                key_field="id"
-                value_field="city"
-                required="true"
-        >
-        </field>
 
         <field name="contact"
                type="text"
@@ -117,10 +88,12 @@
 
         <field name="description"
                type="editor"
+               class="inputbox"
+               size="40"
                label="JFIELD_DESCRIPTION_LABEL"
                description="JFIELD_DESCRIPTION_DESC"
+               filter="safehtml"
 	       buttons="true"
-	       filter="safehtml"
         />
 
     </fieldset>

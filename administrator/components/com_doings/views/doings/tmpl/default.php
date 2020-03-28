@@ -118,10 +118,6 @@ function conveteData($data)
                 <?php echo JHtml::_('grid.sort', 'Data Fim', 'a.date_end', $listDirn, $listOrder); ?>
             </th>
 
-            <th width="5%" class="nowrap center hidden-phone">
-                <?php echo 'Lista'; ?>
-            </th>
-
             <th width="1%" class="nowrap center hidden-phone">
                 <?php echo JHtml::_('grid.sort', 'JGRID_HEADING_ID', 'a.id', $listDirn, $listOrder); ?>
             </th>
@@ -139,18 +135,6 @@ function conveteData($data)
             $canCheckin = $user->authorise('core.manage', 'com_checkin') || $item->checked_out == $userId || $item->checked_out == 0;
             $canEditOwn = $user->authorise('core.edit.own') && $item->created_by == $userId;
             $canChange = $user->authorise('core.edit.state') && $canCheckin;
-
-
-            $db = JFactory::getDBO();
-            $query = $db->getQuery(true);
-            $query->select('d.name AS evento, ds.*');
-            $query->from('#__doings AS d');
-            $query->join('', '#__doing_subscribe AS ds ON d.id = ds.id_doing');
-            $query->where('ds.published = 1');
-            $query->where('ds.id_doing = ' . $item->id);
-
-            $db->setQuery($query);
-            $results = $db->loadObjectList();
 
             ?>
             <tr class="row<?php echo $i % 2; ?>">
@@ -208,17 +192,6 @@ function conveteData($data)
                 </td>
                 <td class="center hidden-phone">
                     <?php echo conveteData($item->date_end); ?>
-                </td>
-                <td class="center hidden-phone">
-                    <?php if(!empty($results)): ?>
-                    <a href="<?php echo JRoute::_('index.php?option=com_doings&task=doings.listaEvento&id=' . (int)$item->id); ?>" class="btn btn-success btn-small">
-                        <i class="fas fa-file-excel"></i>
-                    </a>
-                    <?php else: ?>
-                        <span class="btn btn-wrapper btn-small no-list">
-                            <i class="fas fa-file-excel"></i>
-                        </span>
-                    <?php endif; ?>
                 </td>
                 <td class="center hidden-phone">
                     <?php echo $item->id; ?>

@@ -68,6 +68,11 @@
                         type="text"
                         label="WHATSAPP_MSG_LABEL"
                 />
+                <field
+                        name="maps"
+                        type="text"
+                        label="MAPS_LABEL"
+                />
             </fieldset>
             <fieldset name="advanced">
                 <field
