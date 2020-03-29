@@ -154,7 +154,7 @@ strong, b {
 }
 
 p {
-    line-height: 1.6em;
+    line-height: 1.4;
     margin: 8px 0;
 }
 
@@ -215,7 +215,6 @@ h3 a:hover {
 }
 
 .moduletable h3 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     color: #000000;
     font-size: 18px;
@@ -224,21 +223,18 @@ h3 a:hover {
 }
 
 h4 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     color: #000000;
     font-size: 14px;
 }
 
 h5 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     color: #000000;
     font-size: 14px;
 }
 
 h6 {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 13px;
 }
@@ -270,9 +266,11 @@ ul, ol {
 
 .newsflash-title {
     color: #fff !important;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 300;
     text-transform: uppercase;
+    height: 2.4em;
+    overflow: hidden;
 }
 
 .newsflash-title a {
@@ -280,8 +278,10 @@ ul, ol {
 }
 
 .newsflash-horiz p {
-    font-size: 18px;
+    font-size: 16px;
     margin: 10px;
+    height: 2.8em;
+    overflow: hidden;
 }
 
 figure.newsflash-image {

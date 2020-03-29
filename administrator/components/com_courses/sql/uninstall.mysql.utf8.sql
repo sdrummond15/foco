@@ -1,1 +1,1 @@
-DROP TABLE IF EXISTS `#__doings`;
+DROP TABLE IF EXISTS `#__courses`;

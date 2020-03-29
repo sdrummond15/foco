@@ -5,10 +5,10 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.model');
 
 
-class CoursesModelInscrever extends JModelLegacy
+class CoursesModelCurso extends JModelLegacy
 {
 
-    public static function getInscrever($id = '')
+    public static function getCurso($id = '')
     {
         $id = JRequest::getVar('id');
 
@@ -16,10 +16,9 @@ class CoursesModelInscrever extends JModelLegacy
         if (!empty($id)) {
             $db = JFactory::getDBO();
             $query = $db->getQuery(true);
-            $query->select('d.id AS id,
-                            d.name AS name
-                            ');
+            $query->select('*');
             $query->from('#__courses As d');
+            $query->where('d.published = 1');
             $query->where('d.id = ' . $id);
 
             $db->setQuery($query);

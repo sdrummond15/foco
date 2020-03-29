@@ -6,7 +6,7 @@ jQuery(document).ready(function ($) {
 
 
 
-        $('.doing-img').each(function () {
+        $('.course-img').each(function () {
 
             $(this).height($(this).width());
 

@@ -23,7 +23,7 @@ if(!empty($id)):
 <div class="inscrever">
     <div class="well">
         <div class="row-fluid form-horizontal">
-            <label class="control-label span2">Inscreva-se no evento:</label>
+            <label class="control-label span2">Inscreva-se no curso:</label>
             <div class="span10">
                 <h1><?php echo $name; ?></h1>
             </div>
@@ -31,7 +31,7 @@ if(!empty($id)):
     </div>
 
     <div id="form-inscrever">
-        <form action="<?php echo JRoute::_('index.php?option=com_doings&task=doings.insert'); ?>" id="inscrever" method="post" class="row-fluid form-validate form-horizontal">
+        <form action="<?php echo JRoute::_('index.php?option=com_courses&task=courses.insert'); ?>" id="inscrever" method="post" class="row-fluid form-validate form-horizontal">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
             <div class="control-group">
                 <div class="span12">
@@ -161,7 +161,7 @@ if(!empty($id)):
     jQuery(function ($) {
         $(window).on('resize', function () {
 
-            $('.evento-img').each(function () {
+            $('.curso-img').each(function () {
                 $(this).height($(this).width() * 0.75);
             });
 
@@ -170,7 +170,7 @@ if(!empty($id)):
 </script>
 <?php
 else:
-header("location: ". JRoute::_('index.php?option=com_doings'));
+header("location: ". JRoute::_('index.php?option=com_courses'));
 endif;
 ?>
 

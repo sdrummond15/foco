@@ -2,7 +2,7 @@
 
 defined('_JEXEC') or die;
 
-class DoingsRouter extends JComponentRouterBase{
+class CoursesRouter extends JComponentRouterBase{
 
     public function build(&$query)
     {
@@ -42,16 +42,16 @@ class DoingsRouter extends JComponentRouterBase{
     }
 }
 
-function doingsBuildRoute(&$query)
+function coursesBuildRoute(&$query)
 {
-    $router = new DoingsRouter;
+    $router = new CoursesRouter;
 
     return $router->build($query);
 }
 
-function doingsParseRoute($segments)
+function coursesParseRoute($segments)
 {
-    $router = new DoingsRouter;
+    $router = new CoursesRouter;
 
     return $router->parse($segments);
 }

@@ -34,6 +34,10 @@
     text-transform: uppercase;
 }
 
+.description h1 a:hover {
+    color: #00a19a;
+}
+
 .text-description a,
 .text-description a p {
     color: #FFF;
