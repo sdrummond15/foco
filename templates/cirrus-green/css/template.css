@@ -124,8 +124,9 @@ html, body {
 body {
     text-align: left;
     font-family: 'Avenir LT Std', 'Montserrat';
-    font-size: 0.8em;
-    line-height: 1.4;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.2;
     color: #555555;
     background-color: #fff;
 }
@@ -177,11 +178,10 @@ h1 a:hover {
 }
 
 h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: normal;
     color: #000000;
-    font-size: 18px;
-    line-height: 1.15em;
+    font-size: 24px;
+    line-height: 1.15;
     margin-bottom: 10px;
 }
 
@@ -191,7 +191,7 @@ h2 a {
 }
 
 h2 a:hover {
-    color: #90c140;
+    color: #73b967;
     text-decoration: none;
 }
 
@@ -370,7 +370,7 @@ hr {
     top: 0;
     left: 0;
     z-index: 999;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 #header {
@@ -706,52 +706,49 @@ hr {
     max-width: 100%;
 }
 
+.top-space {
+    padding-top: 178px;
+}
+
 /** Breadcrumbs **/
 
-#breadcrumbs {
-    padding-top: 173px;
-}
+#breadcrumbs {}
 
 /** Menus (Left/Right) **/
 
 #leftmenu {
-    width: 196px;
-    margin: 0px;
-    padding: 0px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-right: 26px;
+    width: calc(30% - 60px);
+    margin: 40px 60px 40px 0;
     float: left;
-    line-height: 1.7em;
+    line-height: 2;
 }
 
 #rightmenu {
-    width: 196px;
-    margin: 0px;
-    padding: 0px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    margin-left: 26px;
+    width: calc(30% - 60px);
+    margin: 40px 0 40px 60px;
     float: right;
-    line-height: 1.7em;
+    line-height: 2;
+}
+
+#leftmenu h3, #rightmenu h3 {
+    display: none;
 }
 
 #leftmenu a, #rightmenu a {
-    color: #000000;
+    color: #00493b;
     text-decoration: none;
+    font-weight: normal;
 }
 
 #leftmenu a:hover, #rightmenu a:hover {
-    color: #90c140;
+    color: #00a19a;
     text-decoration: none;
 }
 
 #leftmenu ul, #rightmenu ul {
-    padding-left: 0px;
+    padding: 0;
+    margin: 0;
     list-style-type: none;
-    margin-left: 0px;
-    margin-top: 12px;
-    margin-bottom: 20px;
 }
 
 #leftmenu ul li, #rightmenu ul li {
@@ -777,6 +774,7 @@ hr {
 
 #leftmenu ul.menu li.current a, #rightmenu ul.menu li.current a {
     font-weight: bold;
+    color: #00a19a;
 }
 
 #leftmenu ul.menu li.current ul li a, #rightmenu ul.menu li.current ul li a {
@@ -810,7 +808,7 @@ hr {
 
 #content-w1 {
     /** left and right menu visible **/
-    width: 50%;
+    width: 40%;
     float: left;
     padding-top: 40px;
     overflow: hidden;
@@ -820,7 +818,7 @@ hr {
 #content-w2 {
     /** left or right menu visible **/
     float: left;
-    width: 75%;
+    width: 70%;
     padding-top: 40px;
     overflow: hidden;
     margin-bottom: 40px;
@@ -1102,9 +1100,6 @@ ul.pagenav {
 }
 
 li.pagenav-prev a, li.pagenav-next a, li.previous a, li.next a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    font-size: 13.5px;
     color: #fff;
     background-color: #90c140;
     border: 0px;
@@ -1136,17 +1131,37 @@ li.pagenav-next, li.next {
     display: inline;
     text-align: left;
     overflow: auto;
+    border-right: 1px solid #00493b;
+}
+
+.pagination ul li:nth-last-child(3) {
+    border: 0;
 }
 
 .pagination ul {
-    margin-left: -28px;
+    margin: 20px auto 0 auto;
+    padding: 0;
+    display: table;
 }
 
-.pagination ul li span, .pagination ul li a {
-    padding-left: 0px;
-    padding-right: 6px;
-    margin-left: 0px;
-    margin-right: 6px;
+.pagination li.pagination-start span, .pagination li.pagination-next span, .pagination li.pagination-end span, .pagination li.pagination-prev span {
+    color: #00493b;
+}
+
+.pagination ul li span {
+    padding: 3px 8px;
+    color: #00a19a;
+    font-weight: normal;
+}
+
+.pagination ul li a {
+    padding: 3px 8px;
+    color: #00493b;
+    font-weight: normal;
+}
+
+.tooltip {
+    display: none !important;
 }
 
 #adminForm div.pagination ul {
@@ -1463,14 +1478,6 @@ div#basic-details div dl dt span img, div#display-misc div div dl dt span img {
     display: none;
 }
 
-#jform_contact_name, #jform_contact_email, #jform_contact_emailmsg, #jform_contact_message {
-    width: 300px;
-    padding: 6px;
-    border: 1px solid #c3c3c3;
-    outline: none;
-    border-radius: 5px;
-}
-
 form#adminForm ul li {
     /*background-color: #000;*/
     background-color: inherit;
@@ -1480,6 +1487,66 @@ form#adminForm ul li {
     margin-left: -28px;
     border: 0;
     list-style-type: none;
+}
+
+.titulo-contato h2 {
+    line-height: 1.2;
+    color: #00a19a;
+    font-size: 24px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+.contact-form fieldset {
+    width: 40%;
+    margin: auto;
+    display: table;
+}
+
+.contact-form fieldset:last-child {
+    padding: 10px 0 10px 5px;
+}
+
+.contact-form input::placeholder {
+
+}
+
+.controls {
+    width: 100%;
+    display: table;
+}
+
+.contact-form input {
+    font-family: 'Avenir LT Std';
+    font-weight: 300;
+    width: calc(100% - 18px);
+    min-width: 240px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #00493b;
+    background-color: #FFF !important;
+    color: #000;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+.contact-form textarea {
+    font-family: 'Avenir LT Std';
+    font-weight: 300;
+    width: calc(100% - 18px);
+    min-width: 240px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #00493b;
+    background-color: #FFF !important;
+    color: #000;
+    font-size: 16px;
+    border-radius: 8px;
+    height: 167px;
+}
+
+.contact-form .form-actions button {
+    float: right;
 }
 
 /** Search **/
@@ -1680,9 +1747,7 @@ a.feed-link {
     margin: 0 auto;
 }
 
-#box1, 
-#box2, 
-#box3 {
+#box1, #box2, #box3 {
     width: 100%;
     display: table;
     margin-bottom: 30px;
@@ -1886,7 +1951,6 @@ body.contentpane a:hover {
 
 .control-group {
     display: flex;
-    margin-top: 15px;
 }
 
 .contact {
@@ -1896,10 +1960,6 @@ body.contentpane a:hover {
 
 .control-label {
     margin-right: 10px;
-}
-
-#jform_contact_name, #jform_contact_email, #jform_contact_emailmsg, #jform_contact_message {
-    width: 100%;
 }
 
 .contact button {
@@ -2102,8 +2162,118 @@ body.contentpane a:hover {
     font-size: 24px;
     font-weight: 300;
 }
+
 .moduletable_menu_bottom ul li a:hover {
     color: #cae32e
+}
+
+.button-link {
+    display: table;
+    margin: 30px auto 0 auto;
+}
+
+.button-link a.btn-link-banner {
+    background-color: #00A19B !important;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding: 15px 60px;
+    border-radius: 0;
+    display: table;
+}
+
+.more-link {
+    display: table;
+    margin: 10px auto 0 auto;
+}
+
+.more-link a.more-link-banner {
+    background-color: transparent !important;
+    color: #00A19B;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-radius: 0;
+    display: table;
+}
+
+.item-page-institucional .img-fulltext-left {
+    width: 40%;
+}
+
+.item-page-institucional p {
+    font-size: 22px;
+}
+
+.item-page-servicos .img-fulltext-left {
+    margin: 0 0 30px 0;
+    width: 100%;
+}
+
+.items-leading {
+    display: table;
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #00a19a;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.items-leading .img-intro {
+    width: 30%;
+    display: block;
+    overflow: hidden;
+    margin: 0 30px 10px 0;
+    float: left;
+    border-radius: 10px;
+}
+
+.items-leading .img-intro span {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: table;
+}
+
+.items-row .img-intro {
+    width: 30%;
+    display: block;
+    overflow: hidden;
+    margin: 0 30px 10px 0;
+    float: left;
+    border-radius: 10px;
+}
+
+.items-row .img-intro span {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: table;
+    transition: 300ms all;
+}
+
+.items-row .img-intro a:hover span {
+    transform: scale(1.1);
+}
+
+.items-row.cols-2 {
+    width: 100%;
+    display: table;
+    margin-bottom: 20px;
+}
+
+.items-row.cols-2 article {
+    width: calc(50% - 30px);
+    display: inline-block;
+    margin-right: 60px;
+    text-align: justify;
+}
+
+.items-row.cols-2 article:nth-child(1) {
+    margin-right: 0;
 }
 
 @media screen and (max-width: 992px) {

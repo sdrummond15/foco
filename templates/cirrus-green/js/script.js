@@ -12,6 +12,23 @@ jQuery(document).ready(function ($) {
         }
     });
 
+    //Adicionando dados no banner da home
+    if ($('.cameraContent').length != 0) {
+        $('.cameraContent:nth(0) .camera_caption > div').append(
+            '<div class="button-link">'
+            + '<a href="index.php/eventos" class="btn btn-link-banner">Inscrições Abertas</a>'
+            + '</div>'
+            + '<div class="more-link">'
+            + '<a href="index.php/eventos" class="more-link-banner">< Saiba mais ></a>'
+            + '</div>'
+        );
+        $('.cameraContent:nth(1) .camera_caption > div').append(
+            '<div class="more-link">'
+            + '<a href="index.php/eventos" class="more-link-banner">< Saiba mais ></a>'
+            + '</div>'
+        );
+    }
+
     /*MENU RESPONSIVO*/
 
     $('.menuresp li.parent > a, .menuresp li.parent > span').after(' <button type="button"><i class="fas fa-chevron-down"></i></button>');
@@ -74,13 +91,13 @@ jQuery(document).ready(function ($) {
 
     $('.moduletable-endereco iframe').height(parseInt($('.moduletable-endereco iframe').width() * 0.6));
 
-    $('.btn-login-logout').click(function(){
-       $('#login-form').slideToggle();
+    $('.btn-login-logout').click(function () {
+        $('#login-form').slideToggle();
     });
 
     $(window).on('resize', function () {
-        $('.blog .img-intro-left').height( $('.blog .img-intro-left').width());
-        $('.blog .img-intro-right').height( $('.blog .img-intro-right').width());
+        $('.items-leading .img-intro').height($('.items-leading .img-intro').width() * 0.55);
+        $('.items-row .img-intro').height($('.items-row .img-intro').width());
     }).trigger('resize');
 
     $('#leftmenu .moduletable-menuint h3').html('Menu <i class="fas fa-bars"></i>');
@@ -89,7 +106,6 @@ jQuery(document).ready(function ($) {
         $(this).siblings('ul').slideToggle();
         $(this).find('i').toggleClass('fa-times', 'fa-bars');
     });
-
 
 });
 

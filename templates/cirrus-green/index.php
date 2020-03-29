@@ -17,6 +17,15 @@ $logo = $this->params->get('logo', $logopath);
 $logoimage = $this->params->get('logoimage');
 $sitetitle = $this->params->get('sitetitle');
 $sitedescription = $this->params->get('sitedescription');
+
+$app = JFactory::getApplication();
+$menu = $app->getMenu();
+$lang = JFactory::getLanguage();
+$home = 0;
+if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
+	$home = 1;
+}
+
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
@@ -89,7 +98,7 @@ $sitedescription = $this->params->get('sitedescription');
 
 		<!-- Breadcrumbs -->
 		<?php if ($this->countModules('position-2')) : ?>
-			<div id="breadcrumbs">
+			<div id="breadcrumbs" <?= ($home == 1) ? 'class="top-space"' : '' ?>>
 				<jdoc:include type="modules" name="position-2" />
 			</div>
 		<?php endif; ?>
@@ -105,11 +114,8 @@ $sitedescription = $this->params->get('sitedescription');
 
 
 		<!-- Content/Menu Wrap -->
-		<div id="content-menu_wrap_bg">
+		<div id="content-menu_wrap_bg" <?= ($home == 0) ? 'class="top-space"' : '' ?>>
 			<div id="content-menu_wrap">
-
-
-
 
 				<!-- Left Menu -->
 				<?php if ($LeftMenuOn) : ?>
@@ -129,10 +135,10 @@ $sitedescription = $this->params->get('sitedescription');
 					$w = 'w2';
 				else :
 					$w = 'w3';
-					?>
-					<div id="content-<?= $w ?>">
-					<?php endif; ?>
-
+				endif;
+				?>
+				<div id="content-<?= $w ?>">
+				
 					<?php if ($this->countModules('position-12')) : ?>
 						<div id="content-top">
 							<jdoc:include type="modules" name="position-12" />
@@ -141,18 +147,17 @@ $sitedescription = $this->params->get('sitedescription');
 
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
+				</div>
+
+
+				<!-- Right Menu -->
+				<?php if ($RightMenuOn) : ?>
+					<div id="rightmenu">
+						<jdoc:include type="modules" name="position-6" style="xhtml" />
+						<jdoc:include type="modules" name="position-8" style="xhtml" />
+						<jdoc:include type="modules" name="position-3" style="xhtml" />
 					</div>
-
-
-					<!-- Right Menu -->
-					<?php if ($RightMenuOn) : ?>
-						<div id="rightmenu">
-							<jdoc:include type="modules" name="position-6" style="xhtml" />
-							<jdoc:include type="modules" name="position-8" style="xhtml" />
-							<jdoc:include type="modules" name="position-3" style="xhtml" />
-						</div>
-					<?php endif; ?>
-
+				<?php endif; ?>
 
 			</div>
 		</div>
@@ -182,20 +187,20 @@ $sitedescription = $this->params->get('sitedescription');
 			</div>
 
 			<div id="copyright">
-                <div class="copyrightint">
-                    <?php if ($this->countModules('position-15')) : ?>
-                        <jdoc:include type="modules" name="position-15" style="xhtml" />
-                    <?php else : ?>
-                        <p>
-                            Copyright &copy; <?php echo $sitetitle . ' - ' . $sitedescription . ' - ' . date('Y'); ?> | Todos os
-                            direitos reservados
-                        </p>
-                    <?php endif; ?>
-                    <a class="sd" href="http://www.sdrummond.com.br" title="Sdrummond Tecnologia" target="_blank">
-                        <img src="images/sd.png" alt="Sdrummond Tecnologia" title="Sdrummond Tecnologia">
-                    </a>
-                </div>
-            </div>
+				<div class="copyrightint">
+					<?php if ($this->countModules('position-15')) : ?>
+						<jdoc:include type="modules" name="position-15" style="xhtml" />
+					<?php else : ?>
+						<p>
+							Copyright &copy; <?php echo $sitetitle . ' - ' . $sitedescription . ' - ' . date('Y'); ?> | Todos os
+							direitos reservados
+						</p>
+					<?php endif; ?>
+					<a class="sd" href="http://www.sdrummond.com.br" title="Sdrummond Tecnologia" target="_blank">
+						<img src="images/sd.png" alt="Sdrummond Tecnologia" title="Sdrummond Tecnologia">
+					</a>
+				</div>
+			</div>
 		</div>
 
 	</div>

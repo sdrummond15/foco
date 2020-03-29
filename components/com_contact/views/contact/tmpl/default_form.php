@@ -35,10 +35,6 @@ if (isset($this->error)) : ?>
 				<div class="controls"><?php echo $this->form->getInput('contact_subject'); ?></div>
 			</div>
 			<div class="control-group">
-				<div class="control-label"><?php echo $this->form->getLabel('contact_subject'); ?></div>
-				<div class="controls"><?php echo $this->form->getInput('contact_subject'); ?></div>
-			</div>
-			<div class="control-group">
 				<div class="control-label"><?php echo $this->form->getLabel('contact_message'); ?></div>
 				<div class="controls"><?php echo $this->form->getInput('contact_message'); ?></div>
 			</div>
