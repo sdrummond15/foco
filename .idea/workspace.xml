@@ -1,62 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85742c29-a056-45fb-b3b3-d67c8071641c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/assets/css/doings.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/controllers/doing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/controllers/doings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/doings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/doings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/helpers/doings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/language/pt-BR/pt-BR.com_doings.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/language/pt-BR/pt-BR.com_doings.sys.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/models/doing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/models/doings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/models/forms/doing.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/tables/doing.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doing/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doing/tmpl/edit.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doing/tmpl/edit_publish.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doing/tmpl/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doing/view.html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doings/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doings/tmpl/default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doings/tmpl/default_batch.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doings/tmpl/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/administrator/components/com_courses/views/doings/view.html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/controllers/doings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/doings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/doings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/language/pt-BR/pt-BR.com_doings.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/language/pt-BR/pt-BR.com_doings.sys.ini" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/models/doings.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/models/evento.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/doings/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/doings/tmpl/default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/doings/tmpl/default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/doings/tmpl/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/doings/view.html.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/evento/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/evento/tmpl/default.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/evento/tmpl/default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/evento/tmpl/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/components/com_courses/views/evento/view.html.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/components/com_courses/access.xml" afterPath="$PROJECT_DIR$/administrator/components/com_courses/access.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/components/com_courses/config.xml" afterPath="$PROJECT_DIR$/administrator/components/com_courses/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/components/com_courses/controller.php" afterPath="$PROJECT_DIR$/administrator/components/com_courses/controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/components/com_courses/sql/uninstall.mysql.utf8.sql" afterPath="$PROJECT_DIR$/administrator/components/com_courses/sql/uninstall.mysql.utf8.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/com_courses/controller.php" afterPath="$PROJECT_DIR$/components/com_courses/controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/com_courses/css/style.css" afterPath="$PROJECT_DIR$/components/com_courses/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/com_courses/js/script.js" afterPath="$PROJECT_DIR$/components/com_courses/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/com_courses/models/inscrever.php" afterPath="$PROJECT_DIR$/components/com_courses/models/inscrever.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/com_courses/router.php" afterPath="$PROJECT_DIR$/components/com_courses/router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/com_courses/views/inscrever/tmpl/default.php" afterPath="$PROJECT_DIR$/components/com_courses/views/inscrever/tmpl/default.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/com_courses/views/inscrever/tmpl/default.xml" afterPath="$PROJECT_DIR$/components/com_courses/views/inscrever/tmpl/default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/components/com_courses/views/inscrever/view.html.php" afterPath="$PROJECT_DIR$/components/com_courses/views/inscrever/view.html.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/mod_article_home/assets/css/style.css" afterPath="$PROJECT_DIR$/modules/mod_article_home/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/mod_events_latest/assets/css/style.css" afterPath="$PROJECT_DIR$/modules/mod_events_latest/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/cirrus-green/css/template.css" afterPath="$PROJECT_DIR$/templates/cirrus-green/css/template.css" />
-    </list>
+    <list default="true" id="85742c29-a056-45fb-b3b3-d67c8071641c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -222,50 +167,6 @@
               <item name="foco" type="b2602c69:ProjectViewProjectNode" />
               <item name="foco" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="foco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foco" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="foco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foco" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mod_events_latest" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="foco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foco" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mod_events_latest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="foco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foco" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mod_events_latest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="foco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foco" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="foco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foco" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="cirrus-green" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="foco" type="b2602c69:ProjectViewProjectNode" />
-              <item name="foco" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="cirrus-green" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="css" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -303,18 +204,17 @@
       <workItem from="1582316497440" duration="2544000" />
       <workItem from="1584922206609" duration="288000" />
       <workItem from="1584925306494" duration="2245000" />
-      <workItem from="1585499939548" duration="3564000" />
+      <workItem from="1585499939548" duration="3941000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8641000" />
+    <option name="totallyTimeSpent" value="9018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
