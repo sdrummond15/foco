@@ -160,3 +160,14 @@ div#jemmoduleteaser .eventbox {
         padding: 10px 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    #all-latest .latest,
+    #all-latest .latest:nth-child(2),
+    .btn.btn-all-events {
+        width: 100%;
+        margin: 0 auto 10px auto;
+        max-width: 450px;
+        float: none;
+    }
+}

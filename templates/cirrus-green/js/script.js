@@ -4,12 +4,22 @@ jQuery(document).ready(function ($) {
 
     $(this).on('scroll', function () {
         var topo = $(this).scrollTop();
-        //Redimensionando a Logo
-        if (topo > 100) {
-            $('#logo a img').height(70);
-        } else {
-            $('#logo a img').height(100);
-        }
+
+        $(window).on('resize', function () {
+            // Redimentsionando de acordo com a largura da tela
+            if ((windowSizes().width) >= 1024) {
+                //Redimensionando a Logo
+                if (topo > 100) {
+                    $('#logo a img').height(70);
+                } else {
+                    $('#logo a img').height(100);
+                }
+            } else if ((windowSizes().width) < 1024 && (windowSizes().width) >= 600) {
+                $('#logo a img').height(60);
+            } else {
+                $('#logo a img').height(50);
+            }
+        }).trigger('resize');
     });
 
     //Adicionando dados no banner da home
@@ -99,12 +109,56 @@ jQuery(document).ready(function ($) {
         $('.items-row .img-intro').height($('.items-row .img-intro').width());
     }).trigger('resize');
 
-    $('#leftmenu .moduletable-menuint h3').html('Menu <i class="fas fa-bars"></i>');
+    //Função pega largura e altura do navegador igual no CSS
+    function windowSizes() {
+        var e = window,
+            a = 'inner';
+        if (!('innerWidth' in window)) {
+            a = 'client';
+            e = document.documentElement || document.body;
+        }
+        return {
+            width: e[a + 'Width'],
+            height: e[a + 'Height']
+        };
+    }
+
+    //Menu Left and Right
+    var menu = $('#leftmenu .moduletable-menuint h3').text();
+
+    $('#leftmenu .moduletable-menuint h3').html(menu + ' <i class="fas fa-bars"></i>');
 
     $('#leftmenu .moduletable-menuint h3').click(function () {
         $(this).siblings('ul').slideToggle();
         $(this).find('i').toggleClass('fa-times', 'fa-bars');
     });
+
+    // ====================================================================================================
+    // ====================================================================================================
+    // Tratando se o menu está aberto ou não e se está responsivo ou não
+    var $window = $(window);
+    var lastWindowWidth = $window.width();
+
+    $window.resize(function () {
+        var windowWidth = $window.width();
+
+        if (lastWindowWidth !== windowWidth) {
+            var menuserv = $("#leftmenu .moduletable-menuint h3");
+            menuserv.each(function () {
+                if (!$(this).is(':visible')) {
+                    $("#leftmenu .moduletable-menuint ul").show();
+                } else {
+                    $('#leftmenu .moduletable-menuint h3').html(menu + ' <i class="fas fa-bars"></i>');
+                    $("#leftmenu .moduletable-menuint ul").hide();
+                }
+            });
+            // EXECUTE YOUR CODE HERE
+            lastWindowWidth = windowWidth;
+        }
+    });
+    // ====================================================================================================
+    // ====================================================================================================
+
 
 });
 

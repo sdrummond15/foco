@@ -51,9 +51,31 @@
     .article-home {
         width: 96%;
     }
+
     .description {
         width: calc(50% - 54px);
         margin: 40px 10px;
         padding: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .description h1 a {
+        font-size: 20px;
+    }
+    .text-description a, .text-description a p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .article-home{
+        padding: 10px 0;
+    }
+    .description {
+        width: calc(100% - 54px);
+        margin: 10px auto;
+        max-width: 450px;
+        display: table;
     }
 }

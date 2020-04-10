@@ -8,13 +8,12 @@ ul.contact-social {
     display: table;
     margin: 0;
     padding: 0;
-    margin-right: 15px;
 }
 
 ul.contact-social li {
-    display: inline-block;
-    padding: 0 5px;
-    vertical-align: bottom;
+    display: table;
+    float: left;
+    padding: 0;
 }
 
 ul.contact-social li:last-child {
@@ -31,12 +30,24 @@ ul.contact-social li a:hover {
     color: #edeef0;
 }
 
+ul.contact-social li a i {
+    font-size: 28px;
+}
+
+ul.contact-social li a span {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/*--------------------------------------------------*/
+/*Whatsapp ICON*/
 ul.contact-social li a.icon-whatsapp {
     border-radius: 50%;
     background-color: #73b967;
     width: 30px;
     display: table;
     text-align: center;
+    margin-right: 5px;
 }
 
 ul.contact-social li a.icon-whatsapp i {
@@ -46,22 +57,29 @@ ul.contact-social li a.icon-whatsapp i {
     color: #00493B;
 }
 
+/*Whatsapp*/
+ul.contact-social li a.whatsapp span {
+    display: table;
+    padding-top: 5px;
+
+}
+
+/*Email*/
+ul.contact-social li a.email span {
+    display: table;
+    float: left;
+    padding-top: 5px;
+}
+
 ul.contact-social li a.email i {
     color: #73b967;
+    display: table;
+    float: left;
+    margin-right: 5px;
+    padding-top: 2px;
 }
 
-ul.contact-social li a b {
-    font-weight: normal;
-}
-
-ul.contact-social li a i {
-    font-size: 28px;
-}
-
-ul.contact-social li a span {
-    margin-right: 10px;
-    font-size: 18px;
-}
+/*--------------------------------------------------*/
 
 .moduletable-sociais #contact-social {
     float: none;
@@ -88,28 +106,47 @@ ul.contact-social li a span {
     ul.contact-social li a b {
         display: none;
     }
-}
 
-@media screen and (max-width: 600px) {
-    ul.contact-social li a i {
-        font-size: 24px;
-        padding: 4px 0;
-        vertical-align: middle;
+    ul.contact-social li a.email span {
+        display: none;
     }
-    ul.contact-social li a span {
-        margin: 0;
+
+    ul.contact-social li a.icon-whatsapp i {
+        font-size: 18px;
+        line-height: 24px;
     }
-    ul.contact-social li {
-        padding: 0 3px;
-        border: 0;
+
+    ul.contact-social li a.icon-whatsapp {
+        width: 24px;
     }
-    ul.contact-social {
-        margin-right: 5px;
+
+    ul.contact-social li a.whatsapp span {
+        padding-top: 3px;
+        font-size: 16px;
+    }
+
+    ul.contact-social li a.email i {
+        padding-top: 0;
     }
 }
 
 @media screen and (max-width: 480px) {
+    ul.contact-social li a.icon-whatsapp i {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    ul.contact-social li a.icon-whatsapp {
+        width: 22px;
+        font-size: 0;
+    }
+
+    ul.contact-social li a.whatsapp span {
+        padding-top: 3px;
+        font-size: 14px;
+    }
+
     ul.contact-social li a i {
-        font-size: 20px;
+        font-size: 22px;
     }
 }

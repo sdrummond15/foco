@@ -80,7 +80,7 @@
             <li>
                 <a href="mailto:<?php echo $email; ?>" target="_blank" class="email">
                     <i class="fas fa-envelope"></i>
-                    <?= $email ?>
+                    <span><?= $email ?></span>
                 </a>
             </li>
         <?php endif; ?>

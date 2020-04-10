@@ -108,6 +108,10 @@ ul.contact-social-footer li a.maps span {
 }
 
 @media screen and (max-width: 768px) {
+    ul.contact-social-footer li {
+        margin: 0 5px;
+    }
+
     ul.contact-social-footer li a i {
         font-size: 30px;
         padding: 4px 0;

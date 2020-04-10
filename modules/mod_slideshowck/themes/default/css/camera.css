@@ -191,17 +191,14 @@
 }
 
 .camera_caption {
+    width: 70%;
+    max-width: 400px;
     top: 10%;
     left: 50%;
     display: table !important;
     position: absolute;
-    width: auto;
     z-index: 1000;
     transform: translate(-50%, 0);
-}
-
-.camera_caption > div {
-    max-width: 400px;
 }
 
 .camera_caption_title {
@@ -538,11 +535,17 @@
         height: 300px !important;
     }
 
+    .camera_target{
+        display: none;
+    }
+
     .camera_caption_title {
+        text-align: center;
         font-size: 36px;
     }
 
     .camera_caption_desc {
+        text-align: center;
         font-size: 24px;
     }
 }
@@ -554,5 +557,13 @@
 
     .camera_caption_title {
         font-size: 24px;
+    }
+
+    .camera_caption_desc {
+        font-size: 20px;
+    }
+
+    .camera_caption {
+        max-width: 90%;
     }
 }

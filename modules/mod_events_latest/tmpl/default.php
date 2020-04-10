@@ -14,6 +14,8 @@ JLoader::registerPrefix('DoingsModel', JPATH_SITE . '/components/com_doings/mode
 
 setlocale(LC_TIME, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
 date_default_timezone_set('America/Sao_Paulo');
+
+if(count($events) > 0):
 ?>
 <div id="latest-list" class="latest<?php echo $moduleclass_sfx; ?>">
     <h1>
@@ -48,3 +50,4 @@ date_default_timezone_set('America/Sao_Paulo');
         </div>
     </div>
 </div>
+<?php endif; ?>
