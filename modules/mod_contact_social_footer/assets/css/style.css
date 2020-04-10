@@ -62,15 +62,19 @@ ul.contact-social-footer li a span {
 ul.contact-social-footer li a.facebook span {
     background-image: url('../../../../images/facebook.png');
 }
+
 ul.contact-social-footer li a.instagram span {
     background-image: url('../../../../images/instagram.png');
 }
+
 ul.contact-social-footer li a.whatsapp span {
     background-image: url('../../../../images/whatsapp.png');
 }
+
 ul.contact-social-footer li a.phone span {
     background-image: url('../../../../images/phone.png');
 }
+
 ul.contact-social-footer li a.maps span {
     background-image: url('../../../../images/maps.png');
 }
@@ -94,6 +98,13 @@ ul.contact-social-footer li a.maps span {
 #contact-social-footer .certificado {
     float: left;
     margin-right: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+    ul.contact-social-footer li a span {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media screen and (max-width: 768px) {

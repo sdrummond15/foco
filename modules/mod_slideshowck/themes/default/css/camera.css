@@ -226,6 +226,7 @@
     font-size: 34px;
     color: #b9ce34;
     font-family: 'Montserrat';
+    font-weight: 300;
     line-height: 1.1;
     font-weight: 200;
 }
@@ -524,9 +525,11 @@
     }
 
     .camera_caption_title {
-        font-size: 48px;
-        max-width: 80%;
-        margin: auto;
+        font-size: 40px;
+    }
+
+    .camera_caption_desc {
+        font-size: 30px;
     }
 }
 
@@ -536,7 +539,11 @@
     }
 
     .camera_caption_title {
-        font-size: 30px;
+        font-size: 36px;
+    }
+
+    .camera_caption_desc {
+        font-size: 24px;
     }
 }
 

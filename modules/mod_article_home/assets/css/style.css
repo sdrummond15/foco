@@ -4,7 +4,7 @@
     background-color: #00493b;
 }
 
-.article-home{
+.article-home {
     width: 1170px;
     display: table;
     margin: auto;
@@ -18,12 +18,13 @@
     border-radius: 10px;
     padding: 15px;
 }
-.description img{
+
+.description img {
     float: left;
     margin-right: 20px;
 }
 
-.description h1{
+.description h1 {
     margin-bottom: 8px;
 }
 
@@ -44,4 +45,15 @@
     font-size: 20px;
     line-height: 1.2;
     font-weight: 300;
+}
+
+@media screen and (max-width: 1200px) {
+    .article-home {
+        width: 96%;
+    }
+    .description {
+        width: calc(50% - 54px);
+        margin: 40px 10px;
+        padding: 15px;
+    }
 }

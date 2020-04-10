@@ -32,6 +32,7 @@ if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
 
 <head>
 	<jdoc:include type="head" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
 	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
@@ -88,12 +89,15 @@ if ($menu->getActive() == $menu->getDefault($lang->getTag())) {
 							<i class="fa fa-bars smallmenu" aria-hidden="true"></i>
 						</div>
 					</div>
-					<div class="menuresp">
-						<jdoc:include type="modules" name="position-1" />
-					</div>
+
 				</div>
 
 			</div>
+
+			<div class="menuresp">
+				<jdoc:include type="modules" name="position-1" />
+			</div>
+
 		</div>
 
 		<!-- Breadcrumbs -->

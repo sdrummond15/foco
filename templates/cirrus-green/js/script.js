@@ -58,7 +58,6 @@ jQuery(document).ready(function ($) {
             }
         });
 
-
     }).trigger('resize');
 
     $('.menuresp').hide();

@@ -47,15 +47,15 @@ div#jemmoduleteaser .eventbox {
     color: #FFF;
 }
 
-#all-latest .latest .data a>span {
+#all-latest .latest .data a > span {
     vertical-align: middle;
 }
 
-#all-latest .latest .data a>span>span:first-child {
+#all-latest .latest .data a > span > span:first-child {
     font-size: 44px;
 }
 
-#all-latest .latest .data a>span>span {
+#all-latest .latest .data a > span > span {
     font-size: 24px;
     text-align: center;
     display: table;
@@ -107,7 +107,7 @@ div#jemmoduleteaser .eventbox {
     text-decoration: none !important;
 }
 
-.btn.btn-all-events:hover{
+.btn.btn-all-events:hover {
     font-weight: normal;
     color: #FFF;
 }
@@ -117,15 +117,46 @@ div#jemmoduleteaser .eventbox {
     vertical-align: middle;
 }
 
+@media screen and (max-width: 1200px) {
+    #all-latest .latest h2 {
+        padding: 5px 10px;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     #all-latest .latest .data {
         width: 60px;
     }
+
     #all-latest .latest .data a span:first-child {
         font-size: 14px;
     }
+
     #all-latest .latest .data a span {
         font-size: 36px;
         line-height: 48px;
+    }
+
+    #all-latest .latest {
+        width: calc(50% - 10px);
+        margin-right: 20px;
+        display: table;
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    #all-latest .latest:nth-child(2) {
+        margin-right: 0;
+    }
+
+    .all-events {
+        display: table;
+        vertical-align: top;
+        width: 100%;
+        height: auto;
+    }
+
+    .all-events a.btn.btn-all-events {
+        padding: 10px 0;
     }
 }
